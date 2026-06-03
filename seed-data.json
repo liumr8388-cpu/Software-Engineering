@@ -1,0 +1,232 @@
+{
+  "suppliers": [
+    {
+      "id": "SUP001",
+      "name": "晨露花艺供应社",
+      "contact": "周岚",
+      "phone": "13800010001",
+      "email": "morning@example.com",
+      "agreement": "年度鲜切花供应协议，结算周期为月结 30 天。",
+      "paymentRecords": [
+        { "date": "2026-04-28", "amount": 8600, "status": "已付款" },
+        { "date": "2026-05-28", "amount": 9200, "status": "已付款" }
+      ]
+    },
+    {
+      "id": "SUP002",
+      "name": "云上温室基地",
+      "contact": "林启",
+      "phone": "13800010002",
+      "email": "greenhouse@example.com",
+      "agreement": "精品盆栽与兰花供应协议，支持紧急补货。",
+      "paymentRecords": [
+        { "date": "2026-05-25", "amount": 5800, "status": "待付款" }
+      ]
+    },
+    {
+      "id": "SUP003",
+      "name": "南湾鲜花合作社",
+      "contact": "何敏",
+      "phone": "13800010003",
+      "email": "southbay@example.com",
+      "agreement": "节日花束供应协议，按批次验收付款。",
+      "paymentRecords": [
+        { "date": "2026-05-12", "amount": 4300, "status": "已付款" }
+      ]
+    }
+  ],
+  "flowers": [
+    {
+      "id": "FL001",
+      "name": "红玫瑰礼束",
+      "sku": "ROSE-RED-10",
+      "category": "玫瑰",
+      "price": 88,
+      "supplierId": "SUP001",
+      "stock": 28,
+      "threshold": 15,
+      "unit": "束",
+      "status": "上架",
+      "theme": "theme-rose",
+      "description": "10 支红玫瑰搭配尤加利，适合纪念日与生日订单。"
+    },
+    {
+      "id": "FL002",
+      "name": "向日葵暖阳束",
+      "sku": "SUN-06",
+      "category": "向日葵",
+      "price": 68,
+      "supplierId": "SUP003",
+      "stock": 9,
+      "threshold": 12,
+      "unit": "束",
+      "status": "上架",
+      "theme": "theme-sun",
+      "description": "6 支向日葵与绿色配草，适合探望和祝福场景。"
+    },
+    {
+      "id": "FL003",
+      "name": "蝴蝶兰盆栽",
+      "sku": "ORCHID-POT-02",
+      "category": "兰花",
+      "price": 168,
+      "supplierId": "SUP002",
+      "stock": 16,
+      "threshold": 8,
+      "unit": "盆",
+      "status": "上架",
+      "theme": "theme-orchid",
+      "description": "双枝蝴蝶兰盆栽，适合办公桌、前台和开业赠礼。"
+    },
+    {
+      "id": "FL004",
+      "name": "香水百合花束",
+      "sku": "LILY-WHITE-05",
+      "category": "百合",
+      "price": 98,
+      "supplierId": "SUP001",
+      "stock": 5,
+      "threshold": 10,
+      "unit": "束",
+      "status": "上架",
+      "theme": "theme-lily",
+      "description": "白色香水百合搭配满天星，花期稳定，香气明显。"
+    },
+    {
+      "id": "FL005",
+      "name": "蓝绣球礼盒",
+      "sku": "HYD-BLUE-BOX",
+      "category": "绣球",
+      "price": 128,
+      "supplierId": "SUP003",
+      "stock": 22,
+      "threshold": 9,
+      "unit": "盒",
+      "status": "上架",
+      "theme": "theme-blue",
+      "description": "蓝色绣球礼盒装，适合节日送礼与企业客户。"
+    }
+  ],
+  "customers": [
+    {
+      "id": "CUS001",
+      "name": "李婉",
+      "phone": "13900020001",
+      "email": "liwan@example.com",
+      "address": "上海市浦东新区花木路 88 号",
+      "preference": "偏好玫瑰和浅色系花束",
+      "level": "VIP",
+      "notes": "纪念日订单频率高",
+      "joinedAt": "2026-01-16"
+    },
+    {
+      "id": "CUS002",
+      "name": "陈序",
+      "phone": "13900020002",
+      "email": "chenxu@example.com",
+      "address": "杭州市西湖区文三路 19 号",
+      "preference": "偏好盆栽与低维护花材",
+      "level": "普通",
+      "notes": "常为公司前台采购",
+      "joinedAt": "2026-02-08"
+    },
+    {
+      "id": "CUS003",
+      "name": "苏晴",
+      "phone": "13900020003",
+      "email": "suqing@example.com",
+      "address": "南京市玄武区中央路 66 号",
+      "preference": "偏好向日葵和明亮色系",
+      "level": "银卡",
+      "notes": "节日前会提前下单",
+      "joinedAt": "2026-03-11"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD20260501001",
+      "customerId": "CUS001",
+      "customerName": "李婉",
+      "items": [
+        { "flowerId": "FL001", "name": "红玫瑰礼束", "price": 88, "quantity": 2 },
+        { "flowerId": "FL005", "name": "蓝绣球礼盒", "price": 128, "quantity": 1 }
+      ],
+      "total": 304,
+      "status": "delivered",
+      "createdAt": "2026-05-01T09:28:00",
+      "paidAt": "2026-05-01T09:33:00",
+      "shippedAt": "2026-05-01T15:20:00",
+      "deliveredAt": "2026-05-02T11:05:00"
+    },
+    {
+      "id": "ORD20260518002",
+      "customerId": "CUS002",
+      "customerName": "陈序",
+      "items": [
+        { "flowerId": "FL003", "name": "蝴蝶兰盆栽", "price": 168, "quantity": 3 }
+      ],
+      "total": 504,
+      "status": "paid",
+      "createdAt": "2026-05-18T14:10:00",
+      "paidAt": "2026-05-18T14:16:00",
+      "shippedAt": "",
+      "deliveredAt": ""
+    },
+    {
+      "id": "ORD20260602003",
+      "customerId": "CUS003",
+      "customerName": "苏晴",
+      "items": [
+        { "flowerId": "FL002", "name": "向日葵暖阳束", "price": 68, "quantity": 4 },
+        { "flowerId": "FL004", "name": "香水百合花束", "price": 98, "quantity": 1 }
+      ],
+      "total": 370,
+      "status": "created",
+      "createdAt": "2026-06-02T10:35:00",
+      "paidAt": "",
+      "shippedAt": "",
+      "deliveredAt": ""
+    }
+  ],
+  "inventoryLogs": [
+    {
+      "id": "LOG001",
+      "flowerId": "FL002",
+      "flowerName": "向日葵暖阳束",
+      "type": "销售扣减",
+      "quantity": 4,
+      "note": "订单 ORD20260602003",
+      "date": "2026-06-02T10:35:00"
+    },
+    {
+      "id": "LOG002",
+      "flowerId": "FL004",
+      "flowerName": "香水百合花束",
+      "type": "销售扣减",
+      "quantity": 1,
+      "note": "订单 ORD20260602003",
+      "date": "2026-06-02T10:35:00"
+    },
+    {
+      "id": "LOG003",
+      "flowerId": "FL003",
+      "flowerName": "蝴蝶兰盆栽",
+      "type": "补货",
+      "quantity": 8,
+      "note": "供应商到货入库",
+      "date": "2026-05-29T16:20:00"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "NTC001",
+      "type": "订单通知",
+      "title": "新订单待处理",
+      "message": "苏晴提交了订单 ORD20260602003，总金额 ￥370.00。",
+      "createdAt": "2026-06-02T10:35:00",
+      "read": false,
+      "resolved": false,
+      "ref": "ORD20260602003"
+    }
+  ]
+}

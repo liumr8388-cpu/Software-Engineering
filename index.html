@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>花卉交易管理系统</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">花</div>
+        <div>
+          <h1>花卉交易管理系统</h1>
+          <p id="currentDate"></p>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <span class="role-pill" id="storageMode">浏览器本地</span>
+        <span class="role-pill">系统管理员</span>
+        <button class="ghost-button" type="button" data-action="reset-demo">重置演示数据</button>
+      </div>
+    </header>
+
+    <div class="shell">
+      <aside class="sidebar" aria-label="主导航">
+        <button type="button" class="nav-item active" data-view="dashboard">概览</button>
+        <button type="button" class="nav-item" data-view="shop">客户下单</button>
+        <button type="button" class="nav-item" data-view="flowers">花卉管理</button>
+        <button type="button" class="nav-item" data-view="orders">订单管理</button>
+        <button type="button" class="nav-item" data-view="inventory">库存管理</button>
+        <button type="button" class="nav-item" data-view="customers">客户管理</button>
+        <button type="button" class="nav-item" data-view="statistics">销售统计</button>
+        <button type="button" class="nav-item" data-view="suppliers">供应商管理</button>
+      </aside>
+
+      <main class="content" id="app" tabindex="-1"></main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
